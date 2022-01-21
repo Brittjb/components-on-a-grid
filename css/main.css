@@ -12,7 +12,31 @@ img {
   width: 100%;
 }
 
+body {
+  display: grid;
+}
+
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.pano {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+.logo {
+  grid-column: 1;
+  grid-row: 3;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+
 }
